@@ -1551,6 +1551,18 @@ define Device/hiwifi_hc5962
 endef
 TARGET_DEVICES += hiwifi_hc5962
 
+define Device/hxkj_360v5s
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := HXKJ
+  DEVICE_MODEL := MT7621
+  DEVICE_VARIANT := 360v5s
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt7615e kmod-mt7663-firmware-ap \
+	-uboot-envtools
+endef
+TARGET_DEVICES += hxkj_360v5s
+
 define Device/humax_e10
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
