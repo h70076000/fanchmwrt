@@ -1646,6 +1646,18 @@ define Device/hilink_hlk-7621a-evb
 endef
 TARGET_DEVICES += hilink_hlk-7621a-evb
 
+define Device/hxkj_360v5s
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := HXKJ
+  DEVICE_MODEL := MT7621
+  DEVICE_VARIANT := 360v5s
+  DEVICE_PACKAGES := kmod-mt7603 kmod-mt7615e kmod-mt7663-firmware-ap \
+	-uboot-envtools
+endef
+TARGET_DEVICES += hxkj_360v5s
+
 define Device/hiwifi_hc5962
   $(Device/nand)
   $(Device/uimage-lzma-loader)
